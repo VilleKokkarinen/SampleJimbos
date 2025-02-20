@@ -37,7 +37,7 @@ Includes some sample jokers and how to make them trigger correctly!
 
 
 
-## how to add base game jokers, or cash at the beginning of a run? ->
+## How to add base game jokers, or cash at the beginning of a run? ->
 ```
 	- Open the .exe as an archive with 7-zip
 	- Open up 'back.lua'
@@ -60,7 +60,7 @@ Includes some sample jokers and how to make them trigger correctly!
     end	
 ```
 ```
-	-> nNw you can add base game jokers to any deck in the beginning of the game!
+	-> Now you can add base game jokers to any deck in the beginning of the game!
 	-> NOTE! only base game jokers, if you figure out a way to insert modded jokers, let me know, or make a pull request!
 	
 	- Ppen up 'game.lua'
