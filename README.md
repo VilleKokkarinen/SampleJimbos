@@ -63,7 +63,7 @@ Includes some sample jokers and how to make them trigger correctly!
 	-> Now you can add base game jokers to any deck in the beginning of the game!
 	-> NOTE! only base game jokers, if you figure out a way to insert modded jokers, let me know, or make a pull request!
 	
-	- Ppen up 'game.lua'
+	- Open up 'game.lua'
 	- Ctrl+f to: "Plasma Deck", or any other deck, and find the one's config you want to edit.
 		
 	- To get blueprint + brainstorm + 10k cash at the beginning for example:
