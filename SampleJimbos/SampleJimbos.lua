@@ -1,9 +1,10 @@
 --- STEAMODDED HEADER
 --- MOD_NAME: SampleJimbos
 --- MOD_ID: SampleJimbos
---- MOD_AUTHOR: Rare_K
+--- MOD_AUTHOR: [Rare_K]
 --- MOD_DESCRIPTION: The SampleJimbos mod
 --- MOD_VERSION: 1.0.0
+--- MOD_SITE: https://github.com/VilleKokkarinen/SampleJimbos
 
 -- you can have shared helper functions
 function shakecard(self) --visually shake a card
@@ -28,6 +29,24 @@ function return_JokerValues() -- not used, just here to demonstrate how you coul
         }
     end
 end
+
+local msg_dictionary={
+    -- do note that when using messages such as: 
+    -- message = localize{type='variable',key='a_xmult',vars={current_xmult}},
+    -- that the key 'a_xmult' will use provided values from vars={} in that order to replace #1#, #2# etc... in the localization file.
+
+    a_chips="+#1#",
+    a_chips_minus="-#1#",
+    a_hands="+#1# Hands",
+    a_handsize="+#1# Hand Size",
+    a_handsize_minus="-#1# Hand Size",
+    a_mult="+#1# Mult",
+    a_mult_minus="-#1# Mult",
+    a_remaining="#1# Remaining",
+    a_sold_tally="#1#/#2# Sold",
+    a_xmult="X#1# Mult",
+    a_xmult_minus="-X#1# Mult",
+}    
 
 local mod_name = 'SampleJimbos' -- Put your mod name here!
 
@@ -154,7 +173,12 @@ local jokers = {
         name = "sample_money",
         text = {
             "Earn (Ante x 2) {C:money}${} at",
-            "end of round",
+            "end of round, also here's some text effects:",
+            "{C:money} money{}, {C:chips} chips{}, {C:mult} mult{}, {C:red} red{}, {C:blue} blue{}, {C:green} green{}",
+            "{C:attention} attention{}, {C:purple} purple{}, {C:inactive} inactive{}",
+            "{C:spades} spades{}, {C:hearts} hearts{}, {C:clubs} clubs{}, {C:diamonds} diamonds{}",
+            "{C:tarot} tarot{}, {C:planet} planet{}, {C:spectral} spectral{}",
+            "{C:edition} edition{}, {C:dark_edition} dark edition{}, {C:legendary} legendary{}, {C:enhanced} enhanced{}",
         },
         config={ },
         pos = { x = 0, y = 0 },
@@ -229,7 +253,10 @@ local jokers = {
     sample_drunk_juggler = {
         name = "sample_drunk_juggler",
         text = {
-            "{C:red}+#1#{} discard,"
+            "{C:red}+#1#{} discard,",
+            "also here's some {X:legendary,C:white}text effects{}:",
+            "{s:0.5} scaled down by 0.5",
+            "{C:attention,T:tag_double}#2#"
         },
         config = { d_size = 1 }, -- d_size  = discard size, h_size = hand size. (HOWEVER, you can't have both on 1 joker!)
         pos = { x = 0, y = 0 },
@@ -248,7 +275,7 @@ local jokers = {
         end,
 
         loc_def = function(self)
-            return { self.ability.d_size }
+            return { self.ability.d_size, localize{type = 'name_text', key = 'tag_double', set = 'Tag'} }
         end
     },
     sample_hackerman = {
@@ -335,7 +362,7 @@ local jokers = {
     sample_rarebaseballcard = {
         name = "sample_rarebaseballcard",
         text = {
-            "{C:green}Rare{} Jokers",
+            "{X:mult,C:white}Rare{} Jokers",
             "each give {X:mult,C:white} X#1# {} Mult",
         },
         config = { extra = { x_mult = 2 } },
