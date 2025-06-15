@@ -1,0 +1,14 @@
+{
+  "id": "SampleJimbos",
+  "name": "SampleJimbos",
+  "display_name": "SampleJimbos",
+  "author": ["Rare_K"],
+  "description": "SampleJimbos mod, a base to start modding Balatro!",
+  "prefix": "SampleJimbos",
+  "main_file": "SampleJimbos.lua",
+  "priority": 0,
+  "badge_colour": "1de619",
+  "badge_text_colour": "",
+  "version": "1.0.1",
+  "dependencies": ["Steamodded (>=1.0.0~BETA-0614a)"]
+}
