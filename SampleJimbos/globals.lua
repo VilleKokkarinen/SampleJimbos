@@ -24,12 +24,3 @@ function loc_colour(_c, _default)
     G.ARGS.LOC_COLOURS.sj_transparent = G.C.SJ.TRANSPARENT
     return loc_colour_ref(_c, _default)
 end
---[[
-local game_start_run_ref = Game.start_run
-function Game:start_run(args)
-    game_start_run_ref(self, args)
-
-    --self.GAME.sj_create_card = SampleJimbos.debug and SampleJimbos.debug_shop_cards or self.GAME.sj_create_card or {}
-    --SampleJimbos.cards_to_create = self.GAME.sj_create_card
-end
-]]

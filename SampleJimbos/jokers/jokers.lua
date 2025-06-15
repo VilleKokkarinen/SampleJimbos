@@ -1,5 +1,3 @@
---[[
-
 
 -- you can have shared helper functions
 function shakecard(self) --visually shake a card
@@ -24,8 +22,6 @@ function return_JokerValues() -- not used, just here to demonstrate how you coul
         }
     end
 end
-
-]]
 
 SMODS.Atlas({
     key = "sample_wee",
@@ -260,7 +256,7 @@ SMODS.Joker{
             local joker_to_clean = #cleanable_jokers > 0 and pseudorandom_element(cleanable_jokers, pseudoseed('clean')) or nil -- pick a random valid joker, or null if no valid jokers
 
             if joker_to_clean then -- if we have a valid joker we can bump into
-                --shakecard(joker_to_clean) -- simulate bumping into a card
+                shakecard(joker_to_clean) -- simulate bumping into a card
                 if(joker_to_clean.edition) then --if joker has an edition
                     if not joker_to_clean.edition.negative then --if joker is not negative
                         joker_to_clean:set_edition(nil) -- clean the joker from it's edition
@@ -388,7 +384,7 @@ SMODS.Joker{
     calculate = function(self, card, context)
         if card.debuff then return nil end
         if not (context.individual or context.repetition) and context.other_joker and context.other_joker.config.center.rarity == 3 and self ~= context.other_joker then
-            --shakecard(context.other_joker)
+            shakecard(context.other_joker)
             return {
                 message = localize{type='variable',key='a_xmult',vars={card.ability.extra.x_mult}},
                 colour = G.C.RED,

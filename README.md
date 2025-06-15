@@ -3,6 +3,15 @@ This works as a base to start modding Balatro!
 
 Includes some sample jokers and how to make them trigger correctly!
 
+# Sort of Big changes in V1.0.1
+```
+	- Steamodded was updated quite heavily, and this project was re structured entirely.
+	- jokers are now in their own folder.
+	- joker's loc_def was deprecated. replaced by loc_vars.
+	- localization was moved outside the joker file.
+	- mod header etc. details moved into the .json file.
+```
+
 ## How to make a new install of Balatro where you can install mods onto?
 ```
 	- Make a "Balatro" folder in the same folder where this readme is
