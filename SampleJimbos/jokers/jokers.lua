@@ -28,70 +28,70 @@ end
 ]]
 
 SMODS.Atlas({
-    key = "j_sample_wee",
+    key = "sample_wee",
     path = "j_sample_wee.png",
     px = 71,
     py = 95
 })
 
 SMODS.Atlas({
-    key = "j_sample_obelisk",
+    key = "sample_obelisk",
     path = "j_sample_obelisk.png",
     px = 71,
     py = 95
 })
 
 SMODS.Atlas({
-    key = "j_sample_specifichand",
+    key = "sample_specifichand",
     path = "j_sample_specifichand.png",
     px = 71,
     py = 95
 })
 
 SMODS.Atlas({
-    key = "j_sample_money",
+    key = "sample_money",
     path = "j_sample_money.png",
     px = 71,
     py = 95
 })
 
 SMODS.Atlas({
-    key = "j_sample_roomba",
+    key = "sample_roomba",
     path = "j_sample_roomba.png",
     px = 71,
     py = 95
 })
 
 SMODS.Atlas({
-    key = "j_sample_drunk_juggler",
+    key = "sample_drunk_juggler",
     path = "j_sample_drunk_juggler.png",
     px = 71,
     py = 95
 })
 
 SMODS.Atlas({
-    key = "j_sample_hackerman",
+    key = "sample_hackerman",
     path = "j_sample_hackerman.png",
     px = 71,
     py = 95
 })
 
 SMODS.Atlas({
-    key = "j_sample_baroness",
+    key = "sample_baroness",
     path = "j_sample_baroness.png",
     px = 71,
     py = 95
 })
 
 SMODS.Atlas({
-    key = "j_sample_rarebaseballcard",
+    key = "sample_rarebaseballcard",
     path = "j_sample_rarebaseballcard.png",
     px = 71,
     py = 95
 })
 
 SMODS.Atlas({
-    key = "j_sample_multieffect",
+    key = "sample_multieffect",
     path = "j_sample_multieffect.png",
     px = 71,
     py = 95
@@ -99,7 +99,7 @@ SMODS.Atlas({
 
 
 SMODS.Joker{
-    key = "j_sample_wee",                                 --name used by the joker.    
+    key = "sample_wee",                                 --name used by the joker.    
     config = { extra = { chips = 8, chip_mod = 2 } },    --variables used for abilities and effects.
     pos = { x = 0, y = 0 },                              --pos in spritesheet 0,0 for single sprites or the first sprite in the spritesheet.
     rarity = 1,                                          --rarity 1=common, 2=uncommen, 3=rare, 4=legendary
@@ -110,18 +110,7 @@ SMODS.Joker{
     discovered = true,                                   --is joker discovered by default.    
     effect=nil,                                          --you can specify an effect here eg. 'Mult'
     soul_pos=nil,                                        --pos of a soul sprite.
-    atlas = 'j_sample_wee',                                -- atlas name, single sprites are deprecated.
-    loc_txt = { -- localization text, used in the UI.
-        name = "Sample Wee",
-        text = {
-            {
-                "This Joker gains",
-                "{C:chips}+#2#{} Chips when each",
-                "played {C:attention}2{} is scored",
-                "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
-            }
-        }
-    },
+    atlas = 'sample_wee',                                -- atlas name, single sprites are deprecated.
 
     calculate = function(self,context)                   --define calculate functions here
         if card.debuff then return nil end               --if joker is debuffed return nil
@@ -152,7 +141,7 @@ SMODS.Joker{
 }
 
 SMODS.Joker{
-    key = "j_sample_obelisk",
+    key = "sample_obelisk",
     config = { extra = { x_mult = 0.1 } },
     pos = { x = 0, y = 0 },
     rarity = 3,
@@ -162,7 +151,7 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
     effect = nil,
-    atlas = 'j_sample_obelisk',
+    atlas = 'sample_obelisk',
     soul_pos = nil,
 
     calculate = function(self, card, context)
@@ -187,7 +176,7 @@ SMODS.Joker{
 }
 
 SMODS.Joker{
-    key = "j_sample_specifichand",
+    key = "sample_specifichand",
     config = { extra = { poker_hand = "Five of a Kind", x_mult = 5 } },
     pos={ x = 0, y = 0 },
     rarity = 3,
@@ -198,7 +187,7 @@ SMODS.Joker{
     discovered = true,
     effect=nil,
     soul_pos=nil,
-    atlas = 'j_sample_specifichand',
+    atlas = 'sample_specifichand',
 
     calculate = function(self,context)
         if card.debuff then return nil end
@@ -219,7 +208,7 @@ SMODS.Joker{
 }
 
 SMODS.Joker{
-    key = "j_sample_money",
+    key = "sample_money",
     config={ },
     pos = { x = 0, y = 0 },
     rarity = 1,
@@ -229,7 +218,7 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
     effect = nil,
-    atlas = 'j_sample_money',
+    atlas = 'sample_money',
     soul_pos = nil,
 
     calculate = function(self, card, context)
@@ -244,7 +233,7 @@ SMODS.Joker{
 }
 
 SMODS.Joker{
-    key = "j_sample_roomba",
+    key = "sample_roomba",
     config={ },
     pos = { x = 0, y = 0 },
     rarity = 2,
@@ -254,7 +243,7 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
     effect = nil,
-    atlas = 'j_sample_roomba',
+    atlas = 'sample_roomba',
     soul_pos = nil,
 
         calculate = function(self, card, context)
@@ -287,7 +276,7 @@ SMODS.Joker{
 }
 
 SMODS.Joker{
-    key = "j_sample_drunk_juggler",
+    key = "sample_drunk_juggler",
     config = { d_size = 1 }, -- d_size  = discard size, h_size = hand size. (HOWEVER, you can't have both on 1 joker!)
     pos = { x = 0, y = 0 },
     rarity = 2,
@@ -297,7 +286,7 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
     effect = nil,
-    atlas = 'j_sample_drunk_juggler',
+    atlas = 'sample_drunk_juggler',
     soul_pos = nil,
 
     calculate = function(self, card, context)
@@ -310,7 +299,7 @@ SMODS.Joker{
 }
 
 SMODS.Joker{
-    key = "j_sample_hackerman",
+    key = "sample_hackerman",
     config = { repetitions = 1 },
     pos = { x = 0, y = 0 },
     rarity = 2,
@@ -320,7 +309,7 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
     effect = nil,
-    atlas = 'j_sample_hackerman',
+    atlas = 'sample_hackerman',
     soul_pos = nil,
 
     calculate = function(self, card, context)
@@ -344,7 +333,7 @@ SMODS.Joker{
 }
 
 SMODS.Joker{
-    key = "j_sample_baroness",
+    key = "sample_baroness",
     config = { extra = { x_mult = 1.5 } },
     pos = { x = 0, y = 0 },
     rarity = 3,
@@ -354,7 +343,7 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
     effect = nil,
-    atlas = 'j_sample_baroness',
+    atlas = 'sample_baroness',
     soul_pos = nil,
 
     calculate = function(self, card, context)
@@ -383,7 +372,7 @@ SMODS.Joker{
 }
 
 SMODS.Joker{
-    key = "j_sample_rarebaseballcard",
+    key = "sample_rarebaseballcard",
     config = { extra = { x_mult = 2 } },
     pos = { x = 0, y = 0 },
     rarity = 2,
@@ -393,7 +382,7 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
     effect = nil,
-    atlas = 'j_sample_rarebaseballcard',
+    atlas = 'sample_rarebaseballcard',
     soul_pos = nil,
 
     calculate = function(self, card, context)
@@ -414,7 +403,7 @@ SMODS.Joker{
 }
 
 SMODS.Joker{
-    key = "j_sample_multieffect",
+    key = "sample_multieffect",
     config = { extra = { chips = 10, mult = 10, x_mult = 2 } },
     pos = { x = 0, y = 0 },
     rarity = 2,
@@ -424,7 +413,7 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
     effect = nil,
-    atlas = 'j_sample_multieffect',
+    atlas = 'sample_multieffect',
     soul_pos = nil,
 
     calculate = function(self, card, context)
