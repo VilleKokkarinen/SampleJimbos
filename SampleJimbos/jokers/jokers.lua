@@ -109,7 +109,6 @@ SMODS.Joker{
     atlas = 'sample_wee',                                -- atlas name, single sprites are deprecated.
 
     calculate = function(self,context)                   --define calculate functions here
-        if card.debuff then return nil end               --if joker is debuffed return nil
         if context.individual and context.cardarea == G.play then -- if we are in card scoring phase, and we are on individual cards
             if not context.blueprint then -- blueprint/brainstorm don't get to add chips to themselves
                 if context.other_card:get_id() == 2 then -- played card is a 2 by rank
@@ -151,7 +150,6 @@ SMODS.Joker{
     soul_pos = nil,
 
     calculate = function(self, card, context)
-        if card.debuff then return nil end
         if context.joker_main and context.cardarea == G.jokers and context.scoring_name then
             local current_hand_times = (G.GAME.hands[context.scoring_name].played or 0) -- how many times has the player played the current type of hand. (pair, two pair. etc..)
             local current_xmult = 1 + (current_hand_times * card.ability.extra.x_mult)
@@ -186,7 +184,6 @@ SMODS.Joker{
     atlas = 'sample_specifichand',
 
     calculate = function(self,context)
-        if card.debuff then return nil end
         if context.joker_main and context.cardarea == G.jokers then
             if context.scoring_name == card.ability.extra.poker_hand then
                 return {
@@ -218,7 +215,6 @@ SMODS.Joker{
     soul_pos = nil,
 
     calculate = function(self, card, context)
-        if card.debuff then return nil end
         if context.end_of_round and not (context.individual or context.repetition) then --and not (context.individual or context.repetition) => make sure doesn't activate on every card like gold cards.
             ease_dollars(G.GAME.round_resets.blind_ante*2) -- ease_dollars adds or removes provided amount of money. (-5 would remove 5 for example)
         end
@@ -243,7 +239,6 @@ SMODS.Joker{
     soul_pos = nil,
 
         calculate = function(self, card, context)
-        if card.debuff then return nil end
         if context.end_of_round and not (context.individual or context.repetition) then
             local cleanable_jokers = {}
 
@@ -309,7 +304,6 @@ SMODS.Joker{
     soul_pos = nil,
 
     calculate = function(self, card, context)
-        if card.debuff then return nil end
         if context.cardarea == G.play and context.repetition and (
             context.other_card:get_id() == 6 or 
             context.other_card:get_id() == 7 or 
@@ -343,7 +337,6 @@ SMODS.Joker{
     soul_pos = nil,
 
     calculate = function(self, card, context)
-        if card.debuff then return nil end
         if not context.end_of_round then
             if context.cardarea == G.hand and context.individual and context.other_card:get_id() == 12 then
                 if context.other_card.debuff then
@@ -382,7 +375,6 @@ SMODS.Joker{
     soul_pos = nil,
 
     calculate = function(self, card, context)
-        if card.debuff then return nil end
         if not (context.individual or context.repetition) and context.other_joker and context.other_joker.config.center.rarity == 3 and self ~= context.other_joker then
             shakecard(context.other_joker)
             return {
@@ -413,7 +405,6 @@ SMODS.Joker{
     soul_pos = nil,
 
     calculate = function(self, card, context)
-        if card.debuff then return nil end
         if context.individual and context.cardarea == G.play and context.other_card:get_id() == 10 then
             return {
                 chips = card.ability.extra.chips,
