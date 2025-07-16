@@ -24,7 +24,7 @@ Includes some sample jokers and how to make them trigger correctly!
 ## To make it easier to build you can:
 ```
 	- Pick a name! Use this name as the name of your folder structure to make everything easier!
-	- Put the name of your mod into build.bat into the "name" field, and into 'local mod_name' in the base .lua file
+	- Put the name of your mod into name tag in the .json file. build.bat will dig it from there!
 	- build.bat copies / refreshes the mod in %appdata%/Mods folder.
 ```
 
