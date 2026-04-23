@@ -49,7 +49,7 @@ Includes some sample jokers and how to make them trigger correctly!
 ## How to add jokers or cash at the beginning of a run? ->
 ### Option 1: Custom decks
 ```
-    - See example decks in decks\decks.lua
+	- See example decks in decks\decks.lua
 ```
 ### Option 2: Modifying the base game decks (can only add base game jokers)
 ```
