@@ -27,10 +27,10 @@ SMODS.Back({
     apply = function(self)
         G.E_MANAGER:add_event(Event({
             func = function()
-                local _joker = add_joker("j_sj_sample_wee", nil, k ~= 1) -- Add a sample wee to our jokers
-                _joker:set_eternal(true) -- Make it eternal
-                _joker.pinned = true -- Pin it to the left
-                add_joker("j_sj_sample_baroness",'polychrome', k~= 1) -- Add a polychrome baroness to our jokers
+                local _joker = add_joker("j_sj_sample_wee", nil, k ~= 1)	-- Add a sample wee to our jokers
+                _joker:set_eternal(true)									-- Make it eternal
+                _joker.pinned = true										-- Pin it to the left
+                add_joker("j_sj_sample_baroness",'polychrome', k~= 1)		-- Add a polychrome baroness to our jokers
             return true
             end
         }))
