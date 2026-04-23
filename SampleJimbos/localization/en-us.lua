@@ -103,6 +103,22 @@ return {
                     }
                 },
             }
+        },
+        Back = {
+            b_sj_money_deck = {
+                name = "Money deck",
+                text = {
+                    "Starts with $10,000",
+                    "and hermit and temperance",
+                },
+            },
+            b_sj_jimbo_deck = {
+                name = "Jimbo deck",
+                text = {
+                    "Starts with an eternal pinned sample wee",
+                    "and a polychrome sample baroness",
+                },
+            }
         }
     },
     misc = {
